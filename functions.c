@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-int main()
+int generate()
 {
     int numk[4];
     int number;
@@ -19,8 +19,10 @@ int main()
             ++j; //заполнили еще одну ячейку
         }
     }
+    return numk;
 }
-void get_g()
+
+int get_g()
 {
     int guess[4];
     int c;
@@ -30,7 +32,9 @@ void get_g()
             guess[i] = c;
         }
     }
-}
+    return guess;
+} 
+
 
 void bulls_cows(int numk[], int guess[])
 {

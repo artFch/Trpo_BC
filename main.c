@@ -17,9 +17,6 @@ int main()
         bulls_cows(numk, g);  
     }
     
-    int g = get_g();
-    bulls_cows(numk, g);
-    
     int key;
     printf("Продолжить игру ? (Y/N): ");
 	    scanf("%s", &key);
