@@ -2,8 +2,9 @@
 #include <stdlib.h>
 #include <time.h>
 
-void generate(int numk[])
+int main()
 {
+    int numk[4];
     int number;
     int i, j = 0;
     srand(time(NULL));
