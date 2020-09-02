@@ -21,6 +21,20 @@ void generate (int numk[])
 		}
 	}
 }
+
+void get_g(){
+    int guess[4];
+    int c;
+    for (int i = 0; i < 4; i++)
+    {
+        scanf("%d" , &c);
+		if ((c >= 0) && (c <= 9))
+		{
+			guess[i] = c;
+		}
+    }
+}
+
 void bulls_cows(int numk[],int guess[])
 {
    int bulls,cows = 0; 
