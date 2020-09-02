@@ -47,4 +47,5 @@ void bulls_cows(int numk[], int guess[])
                 }
             }
     }
+	printf("%d,%d",bulls ,cows);
 }
