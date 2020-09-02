@@ -19,3 +19,19 @@ int main()
     
     int g = get_g();
     bulls_cows(numk, g);
+    
+    printf("Продолжить игру ? (Y/N): ");
+	    scanf("%s", &key);
+            switch (key) {
+                case 'Y': case 'y':
+                    clearScreen(); 
+		    break;
+                case 'N': case 'n':
+                    return -1;
+		    break;
+                default:
+                    printf("Ошибка");
+		    return 0;
+            }
+        
+}
