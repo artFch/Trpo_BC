@@ -26,7 +26,7 @@ int main()
 		printf("%d", numk[i]);
 	}
 
-	while (i < 4)
+	while (bulls < 4)
 	{
 		int c = getchar(); //ввод с клавиатуры
 		if ((c >= '0') && (c <= '9'))
