@@ -3,9 +3,8 @@
 #include <stdlib.h>
 #include <time.h>
 
-int generate(int numk[])
+void generate(int numk[])
 {
-    int numk[4];
     int number;
     int i, j = 0;
     srand(time(NULL));
@@ -22,20 +21,28 @@ int generate(int numk[])
             }
         }
     }
-    return numk;
 }
 
-int get_g()
+int convertNumber(int number, int numk[])
 {
-    int guess[4];
-    int c;
-    for (int i = 0; i < 4; i++) {
-        scanf("%d", &c);
-        if ((c >= 0) && (c <= 9)) {
-            guess[i] = c;
-        }
+    // Проверка на количество символов
+    if (number < 1000 || number > 9999)
+        return 0;
+
+    if (number % 1000 == 0) {
+        numk[0] = 0;
     }
-    return guess;
+
+    for (int i = 3; i >= 0; i--) { // Преобразование числа в массив цифр
+        numk[i] = number % 10;
+        number /= 10;
+    }
+    // Проверка на повторяющиеся цифры
+    for (int i = 0; i < 4; i++)
+        for (int j = i + 1; j < 4; j++)
+            if (numk[i] == numk[j])
+                return 0;
+    return 1;
 }
 
 void bulls_cows(int numk[], int guess[])

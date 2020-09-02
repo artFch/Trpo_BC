@@ -5,15 +5,17 @@
 
 int main()
 {
+    int number;
     int bulls;
     srand(time(NULL));
     printf("\e[1;1H\e[2J");
     int numk[4];
+    int guess[4];
     generate(numk);
     printf(" Input 4 digits: ");
-    while (bulls < 4) {
-        bulls_cows(numk, get_g());
-    }
+    scanf("%d", number);
+    convertNumber(number, numk);
+    bulls_cows(numk, guess);
 
     int key;
     printf("Продолжить игру ? (Y/N): ");

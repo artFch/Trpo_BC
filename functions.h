@@ -1,5 +1,6 @@
 #ifndef FUNCTIONS_H
 #define FUNCTIONS_H
-int get_g();
+void generate();
+int convertNumber(int number, int numk[]);
 void bulls_cows(int numk[], int guess[]);
 #endif
