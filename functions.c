@@ -21,7 +21,6 @@ void generate (int numk[])
 		}
 	}
 }
-
 void get_g(){
     int guess[4];
     int c;
