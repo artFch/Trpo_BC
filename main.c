@@ -25,7 +25,7 @@ int main()
 	    scanf("%s", &key);
             switch (key) {
                 case 'Y': case 'y':
-                    clearScreen(); 
+                    printf("\e[1;1H\e[2J"); 
 		    break;
                 case 'N': case 'n':
                     return -1;
