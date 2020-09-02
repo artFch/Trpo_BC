@@ -13,8 +13,7 @@ int main()
     printf(" Input 4 digits: ");
     while (bulls < 4)
     {
-        int g = get_g();
-        bulls_cows(numk, g);  
+        bulls_cows(numk, get_g());  
     }
     
     int key;
