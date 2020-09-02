@@ -10,4 +10,5 @@ int main()
     int numk[4];
     generate(numk);
     printf(" Input 4 digits: ");
-    get_g();
+    int g = get_g();
+    bulls_cows(numk, g);
