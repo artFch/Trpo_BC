@@ -34,4 +34,15 @@ int main()
 			guess[i++] = c;
 		}
 	}
-}
+    for(int i=0;i<4;i++){
+        if(numk[i] == guess[i]){
+            bulls++;
+        }else for(int j=0;j<4;j++){
+                for(i=0;i<4;i++){
+                    if(numk[j] == guess[i]){
+                        cows++;
+                    }
+                }
+        }
+    }
+}   
