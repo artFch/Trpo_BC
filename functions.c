@@ -21,5 +21,23 @@ void generate (int numk[])
 		}
 	}
 }
+void bulls_cows(int numk[],int guess[])
+{
+   int bulls,cows = 0; 
+   for(int i=0;i<4;i++){//тест на быка
+        if(numk[i] == guess[i]){
+            bulls++;
+        }else for(int j=0;j<4;j++){//подбор под соответствие (нахождение коров)
+                for(i=0;i<4;i++){
+                    if(numk[j] == guess[i]){
+                        cows++;
+                    }
+                }
+        }
+    } 
+}
+
+
+
 
 
