@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-int generate()
+int generate(int numk[])
 {
     int numk[4];
     int number;
