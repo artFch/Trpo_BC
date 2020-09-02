@@ -1,3 +1,4 @@
+#include "functions.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -10,13 +11,14 @@ int generate(int numk[])
     srand(time(NULL));
     while (j < 4) {
         number = rand() % 10; //генерируем случайную цифру от 0 до 9
-        for (int i = 0; i <= j; i++)
+        for (int i = 0; i <= j; i++) {
             if (numk[i] == number) //если цифра где-то повторилась - выход
                 break;
-        if (i == j + 1) //если цифра не повторилась - записываем ее в массив
-        {
-            numk[i - 1] = number;
-            ++j; //заполнили еще одну ячейку
+            if (i == j + 1) //если цифра не повторилась - записываем ее в массив
+            {
+                numk[i - 1] = number;
+                ++j; //заполнили еще одну ячейку
+            }
         }
     }
     return numk;
@@ -33,8 +35,7 @@ int get_g()
         }
     }
     return guess;
-} 
-
+}
 
 void bulls_cows(int numk[], int guess[])
 {
@@ -52,5 +53,5 @@ void bulls_cows(int numk[], int guess[])
                 }
             }
     }
-	printf("%d,%d",bulls ,cows);
+    printf("%d,%d", bulls, cows);
 }
