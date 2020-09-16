@@ -13,7 +13,22 @@ int main()
     int numk[4];
     int guess[4];
     generate(numk);
-    /*for (int i = 0; i < 4; i++)
+    char ans;
+    printf("Показать ответ сразу? (Y/N)\n");
+    scanf("%s", &ans);
+    switch (ans) {
+    case 'Y':
+    case 'y':
+        printf("Ответ :");
+        for (int i = 0; i < 4; i++){
+            printf("%d", numk[i]);
+        }
+        printf("\n");
+        break;
+    case 'N':
+    case 'n':
+        printf("\e[1;1H\e[2J\n");
+    }/*for (int i = 0; i < 4; i++)
         printf("%d", numk[i]);*/
     while (b !=4)
     {
@@ -24,9 +39,9 @@ int main()
         cows(numk, guess, b);
         try++;
     }
-    printf("ПОЗДРАВЛЯЮ С ПОБЕДОЙ!");
+    printf("\n\tПОЗДРАВЛЯЮ С ПОБЕДОЙ!\n");
     if(try<5)
-    printf("Вы победили за %d попытки",try);
+    printf("\tВы победили за %d попытки\n",try);
     else
     {
        printf("Вы победили за %d попыток",try); 

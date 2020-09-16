@@ -69,6 +69,11 @@ void cows(int* numk, int* guess, int bulls)
         }
     }
     cows = cows - bulls;
-    printf(" %d коров  \n",
-           cows);
+    if (cows == 0) {
+        printf(" %d коров  \n",cows);
+    } else if (cows == 1) {
+        printf(" %d корова  \n",cows);
+    } else
+        printf(" %d коровы  \n",cows);
+    
 }
