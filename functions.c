@@ -65,5 +65,6 @@ void cows(int* numk, int* guess,int bulls)
             }
         }
     }
+    cows = cows - bulls;
     printf(""  "%d коров  \n", cows);
 }
