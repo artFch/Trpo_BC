@@ -9,7 +9,7 @@ void generate(int* numk)
     int i, j = 0;
     srand(time(NULL));
     while (j < 4) {
-        number = rand() % 10; //генерируем случайную цифру от 0 до 9
+        number = rand() % 9+1; //генерируем случайную цифру от 0 до 9
         for (i = 0; i <= j; i++) {
             if (numk[i] == number) { //если цифра где-то повторилась - выход
                 break;
@@ -28,10 +28,6 @@ int convertNumber(int num, int* guess)
     // Проверка на количество символов
     if (num < 1000 || num > 9999)
         return 0;
-
-    if (num % 1000 == 0) {
-        guess[0] = 0;
-    }
 
     for (int i = 3; i >= 0; i--) { // Преобразование числа в массив цифр
         guess[i] = num % 10;
