@@ -16,7 +16,7 @@ int main()
 
     printf(" Input 4 digits: ");
     scanf("%d", &num);
-    convertNumber(num, numk);
+    convertNumber(num, guess);
     bulls_cows(numk, guess);
 
     char key;
