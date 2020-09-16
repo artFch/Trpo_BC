@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include "display.h"
 
 int main()
 {
@@ -11,7 +12,7 @@ int main()
         int
         try = 0;
         srand(time(NULL));
-        printf("\e[1;1H\e[2J");
+        clearScreen();
         int numk[4];
         int guess[4];
         generate(numk);
@@ -29,7 +30,7 @@ int main()
             break;
         case 'N':
         case 'n':
-            printf("\e[1;1H\e[2J\n");
+            clearScreen();
         } /*for (int i = 0; i < 4; i++)
              printf("%d", numk[i]);*/
         while (b != 4) {
@@ -53,7 +54,7 @@ int main()
         switch (key) {
         case 'Y':
         case 'y':
-            printf("\e[1;1H\e[2J");
+            clearScreen();
             break;
         case 'N':
         case 'n':
