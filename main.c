@@ -6,6 +6,7 @@
 int main()
 {
     int num = 0;
+    int b = 0;
     srand(time(NULL));
     printf("\e[1;1H\e[2J");
     int numk[4];
@@ -17,7 +18,9 @@ int main()
     printf(" Input 4 digits: ");
     scanf("%d", &num);
     convertNumber(num, guess);
-    bulls_cows(numk, guess);
+    b = bulls_cows(numk, guess);
+    cows(numk, guess,b);
+
 
     char key;
     printf("Продолжить игру ? (Y/N): ");

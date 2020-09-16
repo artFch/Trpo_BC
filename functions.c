@@ -9,7 +9,7 @@ void generate(int* numk)
     int i, j = 0;
     srand(time(NULL));
     while (j < 4) {
-        number = rand() % 9+1; //генерируем случайную цифру от 0 до 9
+        number = rand() % 9 + 1; //генерируем случайную цифру от 0 до 9
         for (i = 0; i <= j; i++) {
             if (numk[i] == number) { //если цифра где-то повторилась - выход
                 break;
@@ -41,20 +41,29 @@ int convertNumber(int num, int* guess)
     return 1;
 }
 
-void bulls_cows(int* numk, int* guess)
+int bulls_cows(int* numk, int* guess)
 {
-    int bulls, cows = 0;
+    int bulls = 0;
     for (int i = 0; i < 4; i++) { //тест на быка
         if (numk[i] == guess[i]) {
             bulls++;
-        } else
-            for (int j = 0; j < 4;j++) { //подбор под соответствие (нахождение коров)
-                for (int p = 0; p < 4; p++) {
-                    if (numk[j] == guess[p]) {
-                        cows++;
-                    }
-                }
-            }
+        }
     }
-    printf("%d быка, %d коров  \n" , bulls ,cows);
+    printf("%d быка  ", bulls);
+    return bulls;
+}
+
+
+
+void cows(int* numk, int* guess,int bulls)
+{
+    int cows = 0;
+    for (int j = 0; j < 4; j++) { //подбор под соответствие (нахождение коров)
+        for (int p = 0; p < 4; p++) {
+            if (numk[j] == guess[p]) {
+                cows++;
+            }
+        }
+    }
+    printf(""  "%d коров  \n", cows);
 }
