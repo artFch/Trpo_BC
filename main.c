@@ -14,13 +14,13 @@ int main()
     generate(numk);
     for (int i = 0; i < 4; i++)
         printf("%d", numk[i]);
-
-    printf(" Input 4 digits: ");
-    scanf("%d", &num);
-    convertNumber(num, guess);
-    b = bulls_cows(numk, guess);
-    cows(numk, guess,b);
-
+    for (int try = 0; try < 10; try++) {
+        printf(" Input 4 digits: ");
+        scanf("%d", &num);
+        convertNumber(num, guess);
+        b = bulls_cows(numk, guess);
+        cows(numk, guess, b);
+    }
 
     char key;
     printf("Продолжить игру ? (Y/N): ");
