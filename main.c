@@ -7,23 +7,34 @@ int main()
 {
     int num = 0;
     int b = 0;
+    int try=0;
     srand(time(NULL));
     printf("\e[1;1H\e[2J");
     int numk[4];
     int guess[4];
     generate(numk);
-    for (int i = 0; i < 4; i++)
-        printf("%d", numk[i]);
-    for (int try = 0; try < 10; try++) {
-        printf(" Input 4 digits: ");
+    /*for (int i = 0; i < 4; i++)
+        printf("%d", numk[i]);*/
+    while (b !=4)
+    {
+        printf(" Введите 4-х значное число ");
         scanf("%d", &num);
         convertNumber(num, guess);
         b = bulls_cows(numk, guess);
         cows(numk, guess, b);
+        try++;
     }
+    printf("ПОЗДРАВЛЯЮ С ПОБЕДОЙ!");
+    if(try<5)
+    printf("Вы победили за %d попытки",try);
+    else
+    {
+       printf("Вы победили за %d попыток",try); 
+    }
+    
 
     char key;
-    printf("Продолжить игру ? (Y/N): ");
+    printf("Начать игру заново ? (Y/N): ");
     scanf("%s", &key);
     switch (key) {
     case 'Y':
