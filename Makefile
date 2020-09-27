@@ -1,8 +1,8 @@
 CC=gcc
 CFLAGS= -c -Wall
-SOURCES=main.c functions.c display.c
+SOURCES=src/main.c src/functions.c src/display.c
 OBJECTS=$(SOURCES:.c=.o)
-EXECUTABLE=prog
+EXECUTABLE=bin/prog
 
 all: $(SOURCES) $(EXECUTABLE)
 	
