@@ -36,6 +36,8 @@ $(TEST_EXE): $(TEST_OBJ) $(patsubst build/src/main.o, ,$(OBJ))
 $(TEST_OBJ_DIR)/%.o: $(TEST_SRC_DIR)/%.c
 	gcc $< -c -o $@ $(CF_TEST) -MMD -MF $(TEST_OBJ_DIR)/$*.d
 
+begin_test:
+	./$(TEST_EXE)
 clean:
 	rm -rf build/src/ build/test
 

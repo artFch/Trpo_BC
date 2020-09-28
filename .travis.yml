@@ -1,4 +1,4 @@
 dist: xenial
 language: c
 script:
-  - make && make test && begin test 
+  - make && make test && make begin_test 
