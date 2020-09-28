@@ -2,4 +2,4 @@ dist: xenial
 language: c
 script:
   - make && make test 
-  - xargs clang-format 
+  - xargs clang-format -i 
