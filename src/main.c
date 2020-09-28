@@ -9,8 +9,7 @@ int main()
     while (1) {
         int num = 0;
         int b = 0;
-        int
-        try
+        int try
             = 0;
         srand(time(NULL));
         clearScreen();
