@@ -1,5 +1,5 @@
-language: c
-compiler: gcc
 dist: xenial
+language: c
 script:
-    - make && make test && make begin_test
+  - make && make test 
+  - git ls-files src/ | xargs clang-format -i && git diff --exit-code
