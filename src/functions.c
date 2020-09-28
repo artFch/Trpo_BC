@@ -58,7 +58,7 @@ int bulls_cows(int* numk, int* guess)
     return bulls;
 }
 
-void cows(int* numk, int* guess, int bulls)
+int cows(int* numk, int* guess, int bulls)
 {
     int cows = 0;
     for (int j = 0; j < 4; j++) { //подбор под соответствие (нахождение коров)
@@ -76,4 +76,5 @@ void cows(int* numk, int* guess, int bulls)
     } else
         printf(" %d коровы  \n",cows);
     
+     return cows;
 }
