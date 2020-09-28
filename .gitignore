@@ -7,4 +7,6 @@ main
 .#*.h
 .*/
 *.d
-bin/*
+bin/prog 
+test 
+bin/**
