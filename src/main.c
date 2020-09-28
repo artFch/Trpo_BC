@@ -1,8 +1,8 @@
+#include "display.h"
 #include "functions.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include "display.h"
 
 int main()
 {
@@ -10,7 +10,8 @@ int main()
         int num = 0;
         int b = 0;
         int
-        try = 0;
+        try
+            = 0;
         srand(time(NULL));
         clearScreen();
         int numk[4];
@@ -39,7 +40,8 @@ int main()
             convertNumber(num, guess);
             b = bulls_cows(numk, guess);
             cows(numk, guess, b);
-            try++;
+            try
+                ++;
         }
         printf("\n\tПОЗДРАВЛЯЮ С ПОБЕДОЙ!\n");
         if (try < 5)

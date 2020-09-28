@@ -42,20 +42,20 @@ CTEST(logic_suite, cows_count)
     int numk[4] = {1, 2, 3, 4};
     int guess[4] = {3, 0, 1, 5};
     int bulls;
-    bulls = bulls_cows(numk,guess);
+    bulls = bulls_cows(numk, guess);
     ASSERT_EQUAL(2, cows(numk, guess, bulls));
 
     guess[0] = 5;
     guess[1] = 6;
     guess[2] = 7;
     guess[3] = 8;
-    bulls = bulls_cows(numk,guess);
+    bulls = bulls_cows(numk, guess);
     ASSERT_EQUAL(0, cows(numk, guess, bulls));
 
     numk[0] = guess[3];
     numk[1] = guess[2];
     numk[2] = guess[1];
     numk[3] = guess[0];
-    bulls = bulls_cows(numk,guess);
+    bulls = bulls_cows(numk, guess);
     ASSERT_EQUAL(4, cows(numk, guess, bulls));
 }
